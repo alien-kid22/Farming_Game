@@ -1,0 +1,12 @@
+{
+  "Potato": {
+    "ItemCategory": "Crop",
+    "StackSize": 99,
+    "Description": "An ordinary potato; can be sold."
+  },
+  "Potato Seeds": {
+    "ItemCategory": "Seeds",
+    "StackSize": 99,
+    "Description": "Used to plant potatoes."
+  }
+}

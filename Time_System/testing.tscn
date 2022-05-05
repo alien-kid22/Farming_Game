@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Time_System/testing.gd" type="Script" id=1]
+
+[node name="testing" type="Control"]
+margin_right = 233.0
+margin_bottom = 163.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 30.9761
+margin_top = 39.0
+margin_right = 192.976
+margin_bottom = 161.0
+text = "Hour:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 31.5367
+margin_top = 52.6911
+margin_right = 87.5367
+margin_bottom = 66.6911
+text = "Minutes:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 31.9093
+margin_top = 69.3201
+margin_right = 88.9093
+margin_bottom = 83.3201
+text = "Seconds:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hour" type="Label" parent="."]
+margin_left = 72.6211
+margin_top = 38.5112
+margin_right = 112.621
+margin_bottom = 52.5112
+
+[node name="minutes" type="Label" parent="."]
+margin_left = 92.4268
+margin_top = 52.8153
+margin_right = 132.427
+margin_bottom = 66.8153
+
+[node name="seconds" type="Label" parent="."]
+margin_left = 99.0287
+margin_top = 69.3201
+margin_right = 139.029
+margin_bottom = 83.3201
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 33.0096
+margin_top = 88.0255
+margin_right = 73.0096
+margin_bottom = 102.026
+text = "Year:"
+
+[node name="years" type="Label" parent="."]
+margin_left = 72.6211
+margin_top = 88.0255
+margin_right = 112.621
+margin_bottom = 102.026
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 33.0096
+margin_top = 104.531
+margin_right = 85.0096
+margin_bottom = 118.531
+text = "Months:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="months" type="Label" parent="."]
+margin_left = 92.4268
+margin_top = 106.731
+margin_right = 132.427
+margin_bottom = 120.731
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 34.11
+margin_top = 123.236
+margin_right = 74.1099
+margin_bottom = 137.236
+text = "Days:"
+
+[node name="days" type="Label" parent="."]
+margin_left = 73.7214
+margin_top = 125.436
+margin_right = 113.721
+margin_bottom = 139.436

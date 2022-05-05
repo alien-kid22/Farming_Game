@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="GridContainer" type="GridContainer"]
+modulate = Color( 0.211765, 0.0784314, 0.0784314, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
