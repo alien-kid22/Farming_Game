@@ -59,7 +59,8 @@ func check_plant_status(phase_days):
 	$Anim.play(anim)
 	
 	if current_phase == 0:
-		print("current phase = 0" , global_position)
+		var plant_pos = global_position
+		print("current phase = 0" , plant_pos)
 		SignalManager.emit_signal("harvest_plant")
 		#this code works
 		

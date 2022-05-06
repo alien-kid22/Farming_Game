@@ -5,6 +5,7 @@ var tile_pos_infront_of_player
 onready var _tilemap = "res://Farm/Farm.tres"
 const SlotClass = preload("res://Inventory/Slot.gd")
 const ItemClass = preload("res://Item/Item.gd")
+const PlantClass = preload("res://Crops/Plant.gd")
 var ItemDropPath = "res://ItemDrop/ItemDrop.tscn"
 var PlantPath = load("res://Crops/Plant.tscn")
 var crop_data = {"pk": 1,
@@ -72,11 +73,14 @@ func _input(event):
 			self.set_cellv(cell_pos, self.get_tileset().find_tile_by_name("watered_dirt"))
 
 	elif event.is_action_pressed("Sickle"):
-		var seed_pos = world_to_map(get_global_mouse_position())
+		var plant = PlantClass
+		var plant_pos = plant.plant_pos
+		#var seed_pos = world_to_map(get_global_mouse_position())
 		#var cell_pos = world_to_map(get_global_mouse_position())
-		print("seed pos:", seed_pos)
+		#print("seed pos:", seed_pos)
 		var mouse_pos = get_viewport().get_mouse_position()
 		print("mouse pos:", mouse_pos)
+		print("plant_pos:", plant_pos)
 		
 		var crop_path = "res://Crops/Potato.tscn"
 		var crop = load(crop_path).instance()
