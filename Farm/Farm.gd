@@ -72,10 +72,9 @@ func _input(event):
 			self.set_cellv(cell_pos, self.get_tileset().find_tile_by_name("watered_dirt"))
 
 	elif event.is_action_pressed("Sickle"):
-		var seed_pos = world_to_map(get_global_mouse_position())
-		#var cell_pos = world_to_map(get_global_mouse_position())
-		print("seed pos:", seed_pos)
+		var cell_pos = world_to_map(get_global_mouse_position())
 		var mouse_pos = get_viewport().get_mouse_position()
+		print("cell_pos:", cell_pos)
 		print("mouse pos:", mouse_pos)
 		
 		var crop_path = "res://Crops/Potato.tscn"
@@ -86,10 +85,10 @@ func _input(event):
 		print(mouse_pos)
 		print(current_phase)
 		
-#		if current_phase == 0:
-		var item_drop = load(ItemDropPath).instance()
-		item_drop.global_position = mouse_pos
-		add_child(item_drop) 
+		if current_phase == 4:
+			var item_drop = load(ItemDropPath).instance()
+			item_drop.global_position = get_global_mouse_position()
+			add_child(item_drop) 
 
 #NEEDED TO CHANGE SCENES FOR THE PLANT PROBLEM. HERE IS CODE THAT
 #WILL FIX IT.
