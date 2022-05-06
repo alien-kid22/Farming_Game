@@ -9,8 +9,6 @@ export (int) var day_of_current_phase = 0
 export (int) var crop_age = 0 
 export (bool) var dead = false
 
-#signal harvest_plant
-
 func _ready():
 	farm_map = get_parent()
 
@@ -59,9 +57,11 @@ func check_plant_status(phase_days):
 	$Anim.play(anim)
 	
 	if current_phase == 0:
+		print("current phase = 0" , global_position)
 		var plant_pos = global_position
-		print("current phase = 0" , plant_pos)
+		print("plant_pos", plant_pos)
 		SignalManager.emit_signal("harvest_plant")
+		return
 		#this code works
 		
 #func check_if_planted():
