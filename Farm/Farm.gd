@@ -87,9 +87,9 @@ func _input(event):
 		print(current_phase)
 		
 #		if current_phase == 0:
-#			var item_drop = load(ItemDropPath).instance()
-#			item_drop.global_position = mouse_pos
-#			add_child(item_drop) 
+		var item_drop = load(ItemDropPath).instance()
+		item_drop.global_position = mouse_pos
+		add_child(item_drop) 
 
 #NEEDED TO CHANGE SCENES FOR THE PLANT PROBLEM. HERE IS CODE THAT
 #WILL FIX IT.
