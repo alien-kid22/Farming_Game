@@ -18,3 +18,4 @@ func _on_new_day_start():
 	check_dirt_status()
 	check_plant_status(phase_days)
 	#check_if_planted()
+	

@@ -261,6 +261,7 @@ tracks/3/keys = {
 
 [sub_resource type="CapsuleShape2D" id=6]
 radius = 14.2908
+height = 21.4066
 
 [node name="Potato" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -279,5 +280,5 @@ anims/3 = SubResource( 4 )
 anims/4 = SubResource( 5 )
 
 [node name="Shape" parent="." index="2"]
-position = Vector2( 6.98421, 3.99409 )
+position = Vector2( 12.9842, 4.99409 )
 shape = SubResource( 6 )

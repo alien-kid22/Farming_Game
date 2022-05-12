@@ -62,7 +62,7 @@ func add_item_quanity(slot: SlotClass, quanity_to_add: int):
 func _input(event):
 	var slot = SlotClass
 	if event is InputEventKey:
-		if event.scancode == KEY_R and event.pressed:
+		if event.scancode == KEY_R and event.pressed: #and farm.tile_id == 31:
 			for item in inventory:
 				var item_name = inventory[item][0]
 				var item_quanity = inventory[item][1]

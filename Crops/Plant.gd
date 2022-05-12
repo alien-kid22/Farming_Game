@@ -25,7 +25,7 @@ func initialize(data):
 func check_dirt_status():
 	var dirt_pos = farm_map.world_to_map(position)
 	var dirt_id = farm_map.get_cellv(dirt_pos)
-	print(dirt_id)
+	print("dirt_id:", dirt_id)
 	# Crop get cluttered
 	if dirt_id == 33:
 		crop_age += 1
@@ -56,7 +56,7 @@ func check_plant_status(phase_days):
 		
 	$Anim.play(anim)
 	
-	if current_phase == 0:
+	if current_phase == 4:
 		print("current phase = 0" , global_position)
 		var plant_pos = global_position
 		print("plant_pos", plant_pos)

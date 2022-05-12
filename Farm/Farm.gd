@@ -37,7 +37,10 @@ func refresh_tiles():
 		set_cellv(tile_pos, get_tileset().find_tile_by_name("scratched_dirt"))
 
 func _input(event):
-	if event.is_action_pressed("Plant"):
+	var new_seed_pos = world_to_map(get_global_mouse_position())
+	var tileset_id = get_cellv(new_seed_pos)
+	# ^ these are throwaway vars, don't use them again.
+	if event.is_action_pressed("Plant") and tileset_id == 31:
 		var mouse_pos = get_viewport().get_mouse_position()
 		print(mouse_pos)
 		var crop_id = get_instance_id()
@@ -48,7 +51,6 @@ func _input(event):
 		crop.initialize(crop_data)
 		crop.global_position = get_global_mouse_position()
 		add_child(crop)
-		
 			
 	elif event.is_action_pressed("Hoe"):
 		if event is InputEventMouseButton:
