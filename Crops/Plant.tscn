@@ -4,6 +4,12 @@
 
 [node name="Plant" type="StaticBody2D"]
 script = ExtResource( 1 )
+pk = null
+object_name = null
+current_phase = null
+day_of_current_phase = null
+crop_age = null
+dead = null
 
 [node name="Sprite" type="Sprite" parent="."]
 

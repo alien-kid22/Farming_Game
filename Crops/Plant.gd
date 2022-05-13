@@ -57,15 +57,11 @@ func check_plant_status(phase_days):
 	$Anim.play(anim)
 	
 	if current_phase == 4:
-<<<<<<< Updated upstream
-		print("current phase = 0" , global_position)
-=======
 		print("current phase = 4" , global_position)
->>>>>>> Stashed changes
 		var plant_pos = global_position
 		print("plant_pos", plant_pos)
 		SignalManager.emit_signal("harvest_plant")
-		return
+		return(plant_pos)
 		#this code works
 		
 #func check_if_planted():

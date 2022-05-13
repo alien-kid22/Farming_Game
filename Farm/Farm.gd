@@ -51,10 +51,8 @@ func _input(event):
 		crop.initialize(crop_data)
 		crop.global_position = get_global_mouse_position()
 		add_child(crop)
-<<<<<<< Updated upstream
-=======
-		#get_instance_id()         #instance id = 1372
->>>>>>> Stashed changes
+		var new_crop = instance_from_id(1372)
+		#get_instance_id()    #instance id = 1372
 			
 	elif event.is_action_pressed("Hoe"):
 		if event is InputEventMouseButton:
@@ -91,13 +89,17 @@ func _input(event):
 		print(mouse_pos)
 		print("plant current_phase:", current_phase)
 		
-		if crop.current_phase == 1:
-			var item_drop = load(ItemDropPath).instance()
-			item_drop.global_position = get_global_mouse_position()
-			add_child(item_drop) 
+		#if crop.current_phase == 1:
+		var item_drop = load(ItemDropPath).instance()
+		item_drop.global_position = get_global_mouse_position()
+		add_child(item_drop) 
 			
 #NEEDED TO CHANGE SCENES FOR THE PLANT PROBLEM. HERE IS CODE THAT
 #WILL FIX IT.
 
 func _on_Plant_harvest_plant():
 	print("plant is able to be harvested")
+	var sickle_func = InputEventAction.new()
+	sickle_func.action = "Sickle"
+	sickle_func.pressed = true
+	Input.parse_input_event(sickle_func)
